@@ -8,6 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Employee</title>
 	<link rel="stylesheet" href="${path}/webjars/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 	<div class="container">
@@ -19,6 +20,12 @@
 					</div>
 					<div class="panel-body">
 						<form:form method="POST" action="/save" class="form-signin form-horizontal" commandName="employee">
+							<c:if test="${message ne null}">
+								<div class="alert alert-danger">
+									${message}
+								</div>
+							</c:if>
+							
 							<div class="form-group">
 								<div class="col-md-12">
 									<div class="input-group input-group-md">
@@ -48,6 +55,9 @@
 										<form:input class="form-control"  path="salary" placeholder="Enter Salary" required="true"/>
 									</div>
 								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-12 g-recaptcha" data-sitekey="6Lcc0HwUAAAAAKNJBjHgioF2h4FALhdILADh-or6"></div>
 							</div>
 							<div class="form-group">
 								<div class="col-md-12" align="right">
