@@ -19,14 +19,6 @@
 					</div>
 					<div class="panel-body">
 						<form:form method="POST" action="/save" class="form-signin form-horizontal" commandName="employee">
-							<c:if test="${message ne null}">
-								<div class="alert alert-danger alert-dismissible">
-									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-									${message}
-								</div>
-							</c:if>
 							<div class="form-group">
 								<div class="col-md-12">
 									<div class="input-group input-group-md">
